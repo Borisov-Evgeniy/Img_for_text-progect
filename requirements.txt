@@ -1,0 +1,5 @@
+aiogram==2.16.1
+pytesseract==0.3.8
+Pillow==8.3.1
+docxtpl==0.5.1
+openpyxl==3.0.9
