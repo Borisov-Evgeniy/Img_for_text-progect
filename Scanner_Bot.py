@@ -17,7 +17,7 @@ os.environ['TESSDATA_PREFIX'] = r'C:\Program Files\Tesseract-OCR\tessdata'
 # Указываем путь к директории с исполняемым файлом Tesseract OCR
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
-API_TOKEN = '6100027035:AAEi16gmd2eLPKvOJ9XSM_ebIq65dcznI9g'
+API_TOKEN = 'YOUR_TOKEN'
 bot = Bot(token=API_TOKEN)
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
@@ -60,7 +60,7 @@ async def handle_output_type(message: types.Message, state: FSMContext):
     text = data.get('text', '')
     if output_type == 'Word':
         filename = 'output.docx'
-        doc = DocxTemplate("templates/base.docx")  # path to the base .docx template
+        doc = DocxTemplate("templates/base.docx")
         context = {'text': text}
         doc.render(context)
         doc.save(filename)
